@@ -10,11 +10,17 @@
   </head>
   <body>
     <div id="app">
-      
+
+      <template v-if="true">
+				<p v-html="profile"></p>
+				<p v-html="development"></p>
+				<p v-html="projects"></p>
+			</template>
+
       <p
-	 v-if="message == profile"
-	 v-html="profile"
-	></p>
+      v-if="message == profile"
+      v-html="profile"
+      ></p>
 
     </div>
     <script>
