@@ -10,16 +10,25 @@
   </head>
   <body>
     <div id="app">
-
-      <template v-if="true">
-				<p v-html="profile"></p>
-				<p v-html="development"></p>
-				<p v-html="projects"></p>
-			</template>
-
       <p
       v-if="message == profile"
       v-html="profile"
+      ></p>
+      <p
+      v-if="message == projects"
+      v-html="projects"
+      ></p>
+      <p
+      v-if="message == expirience"
+      v-html="expirience"
+      ></p>
+      <p
+      v-if="message == education"
+      v-html="education"
+      ></p>
+      <p
+      v-if="message == development"
+      v-html="development"
       ></p>
 
     </div>
@@ -46,7 +55,6 @@
         //}
       });
 
-      app.message = app.profile
     </script>
   </body>
 </html>
