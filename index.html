@@ -14,10 +14,24 @@
     </div>
     <script>
       "use strict"
+
+      function preview(element) {
+        message = element
+      }
+
       var app = new Vue({
         el: '#app',
         data: {
-          message: "Hello! This is with Vue!"
+          message:      "Hello! This is with Vue!",
+          profile:      "profile",
+          projects:     "projects",
+          expirience:   "expirience",
+          education:    "education",
+          development:  "development"
+        },
+        methods: {
+           //message: preview(message),
+           profile: preview(profile)
         }
       });
     </script>
