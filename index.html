@@ -53,7 +53,7 @@
 
       <div class="topnav">
         <!-- when clicked show component -->
-        <button @click="setMessage(app.profile)">Profile</button>
+        <button v-html="active" @click="setMessage(app.profile)">Profile</button>
 
         
       </div>
