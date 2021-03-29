@@ -10,29 +10,28 @@
     }
 
     .header {
-      background-color: #c19d9d92;
+      background-color: #ffffff92;
       padding: 20px;
       text-align: center
     }
     
     .topnav {
       overflow: hidden;
-      background-color: #7b3775c4;
+      background-color: #74557182;
     }
 
     .topnav a {
-      float: none;
+      float: left;
       display: block;
       color: #f2f2f2;
       text-align: center;
-      text-decoration: indigo;
     }
     
     .background {
       /*placeholder for eventual image*/
       /* background-image: url("./CoverPhoto.png"); */
       background-color: #c400005b;
-      height: 500px;
+      /* height: 500px; */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -43,7 +42,7 @@
   </head>
   <body>
     <div class="header">
-        <h1>Emily Schroeder | erschroeder@knox.edu<hr></h1>
+        <h1>Emily Schroeder<hr></h1>
     </div>
     <div class="topnav">
       <!-- links to resume pieces here -->
@@ -52,6 +51,7 @@
       <a href="#">Expirience</a>
       <a href="#">Education</a>
       <a href="#">Development</a>
+      <a href="#">Contact</a>
     </div>
     <div class="background"></div>
     <script src="./js/vue.js"></script>
@@ -78,6 +78,10 @@
       v-if="message == development"
       v-html="development"
       ></p>
+      <p
+      v-if="message == contact"
+      v-html="contact"
+      ></p>
 
     </div>
     <script>
@@ -91,7 +95,8 @@
           projects:     "projects here",
           expirience:   "expirience here",
           education:    "education here",
-          development:  "development here"
+          development:  "development here",
+          contact:      "erschroeder@knox.edu"
         },
         //methods: {
            //message: preview(message),
