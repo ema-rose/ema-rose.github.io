@@ -4,19 +4,31 @@
     <title>Resume</title>
 
     <style>
-      
-    </style>
+    body {
+      margin: 6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
     
+    .background {
+      /* background-image: url("./CoverPhoto.png"); */
+      background-color: #ebd1d1;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    </style>
+    </head>
+    <body>
+    <div class="background"></div>
     <script src="./js/vue.js"></script>
-  </head>
-  <body>
-    <p>Emily Schroeder<hr>erschroeder@knox.edu</p>
-    <address>
-      Address<br>
-      Address2
-    </address>
+
+    <p>Emily Schroeder | erschroeder@knox.edu<hr></p>
     <div id="app">
-      <p style="background-color:#ff6347ba;"
+      <!-- <p style="background-color:#ff6347ba;" -->
+      <p
       v-if="message == profile"
       v-html="profile"
       ></p>
