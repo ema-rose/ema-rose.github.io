@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <script src="./js/vue.js"></script>
   <head>
     <title>Resume</title>
     
@@ -45,19 +46,18 @@
     <div class="header">
         <h1>Emily Schroeder<hr></h1>
     </div>
-    <div class="topnav">
-      <!-- links to resume pieces here -->
-      <a href="#">Profile</a>
-      <a href="#">Projects</a>
-      <a href="#">Expirience</a>
-      <a href="#">Education</a>
-      <a href="#">Development</a>
-      <a href="#">Contact</a>
-    </div>
     <div class="background"></div>
-    <script src="./js/vue.js"></script>
+    
 
     <div id="app">
+
+      <div class="topnav">
+        <!-- when clicked show component -->
+        <button @click="setMessage(app.profile)">Profile</button>
+
+        
+      </div>
+
       <!-- <p style="background-color:#ff6347ba;" -->
       <p
       v-if="message == profile"
@@ -99,10 +99,15 @@
           development:  "development here",
           contact:      "erschroeder@knox.edu"
         },
-        //methods: {
+        methods: {
+          
+          setMessage (element) {
+            this.message = element;
+          }
+
            //message: preview(message),
            //profile: preview(this.profile)
-        //}
+        }
       });
 
     </script>
