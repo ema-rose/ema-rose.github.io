@@ -2,16 +2,23 @@
 <html>
   <head>
     <title>Resume</title>
-
+    
     <style>
     body {
-      margin: 6;
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      background-color: #c19d9d92;
+      padding: 20px;
+      text-align: center
     }
     
     .background {
+      /*placeholder for eventual image*/
       /* background-image: url("./CoverPhoto.png"); */
-      background-color: #ebd1d1;
+      background-color: #c400005b;
       height: 500px;
       background-position: center;
       background-repeat: no-repeat;
@@ -20,12 +27,14 @@
     }
 
     </style>
-    </head>
-    <body>
+  </head>
+  <body>
+    <div class="header">
+        <h1>Emily Schroeder | erschroeder@knox.edu<hr></h1>
+    </div>
     <div class="background"></div>
     <script src="./js/vue.js"></script>
 
-    <p>Emily Schroeder | erschroeder@knox.edu<hr></p>
     <div id="app">
       <!-- <p style="background-color:#ff6347ba;" -->
       <p
@@ -53,19 +62,15 @@
     <script>
       "use strict"
 
-      function preview(element) {
-        //app.message = element
-      }
-
       var app = new Vue({
         el: '#app',
         data: {
           message:      "",
-          profile:      "profile",
-          projects:     "projects",
-          expirience:   "expirience",
-          education:    "education",
-          development:  "development"
+          profile:      "profile here",
+          projects:     "projects here",
+          expirience:   "expirience here",
+          education:    "education here",
+          development:  "development here"
         },
         //methods: {
            //message: preview(message),
