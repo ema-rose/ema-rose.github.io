@@ -58,7 +58,7 @@
     <div id="app">
       <div class="background">
         <div class="header">
-          <button class="button" @click="setMessage()">Profile</button>
+          <button class="button" @click="setMessage('profile')">Profile</button>
           <button class="button" @click="setMessage()">Projects</button>
           <button class="button" @click="setMessage()">Expirience</button>
           <button class="button" @click="setMessage()">Education</button>
@@ -118,8 +118,11 @@
         },
         methods: {
           
-          setMessage () {
-            this.message = this.profile;
+          setMessage (text) {
+            if (text == this.profile) {
+              this.message = this.profile;
+            }
+            
           }
 
            //message: preview(message),
