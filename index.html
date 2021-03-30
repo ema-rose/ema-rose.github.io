@@ -87,6 +87,11 @@
       ></p>
 
     </div>
+
+    <div id="app-2">
+      <p><img v-bind:src="resume"></p>
+    </div>
+
     <script>
       "use strict"
 
@@ -109,6 +114,19 @@
 
            //message: preview(message),
            //profile: preview(this.profile)
+        }
+      });
+
+      var app2 = new Vue({
+        el: '#app-2',
+        data: {
+          resume:  ''
+        },
+        
+        methods: {
+          resume: function() {
+            this.resume = "./files/Resume.png"
+          }
         }
       });
 
