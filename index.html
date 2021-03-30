@@ -42,15 +42,19 @@
     </style>
   </head>
   <body>
-    
-    <div class="background">
-      <div class="header">
-        <h1>Emily Schroeder<hr></h1>
-    </div>
-    </div>
+    <div id="app">
+
+      </div>
+      <div class="background">
+        <div class="header">
+          <h1>Emily Schroeder<hr></h1>
+          <h1>{{message}}</h1>
+          <button @click="setMessage(app.profile)">Profile</button>
+      </div>
+      </div>
     
 
-    <div id="app">
+    
 
       <div class="topnav">
         <!-- when clicked show component -->
@@ -98,7 +102,7 @@
       var app = new Vue({
         el: '#app',
         data: {
-          message:      "",
+          message:      "testing",
           profile:      "profile here",
           projects:     "projects here",
           expirience:   "expirience here",
