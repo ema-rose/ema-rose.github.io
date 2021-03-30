@@ -39,6 +39,15 @@
       position: relative;
     }
 
+    .preview {
+      background-color: #0000009c;
+      width: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
     </style>
   </head>
   <body>
@@ -92,8 +101,10 @@
 
     </div>
 
-    <div class="background" id="app-2">
-      <p><img v-bind:src="resume"></p>
+    <div id="app-2">
+      <div class="preview">
+        <p><img v-bind:src="resume"></p>
+      </div>
     </div>
 
     <script>
