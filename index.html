@@ -30,7 +30,7 @@
     }
     
     .background {
-      background-image: url("./CoverPhoto.png");
+      background-image: url("./files/CoverPhoto.png");
       background-color: #0000009c;
       height: 500px;
       background-position: center;
@@ -120,11 +120,11 @@
       var app2 = new Vue({
         el: '#app-2',
         data: {
-          resume:  ''
+          resume:  './files/Resume.png'
         },
         
         methods: {
-          resume: function() {
+          setResume: function() {
             this.resume = "./files/Resume.png"
           }
         }
