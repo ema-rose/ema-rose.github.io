@@ -18,7 +18,7 @@
 
     .button {
       border: none;
-      border-radius: 12px;
+      border-radius: 6px;
       background-color: inherit;
       color: #4d4d4d92;
       text-align: center;
@@ -59,18 +59,23 @@
     <div id="app">
       <div class="background">
         <div class="header">
-          <button class="button" @click="setMessage('profile')">Profile</button>
-          <button class="button" @click="temp()">Projects</button>
-          <button class="button" @click="setMessage()">Expirience</button>
-          <button class="button" @click="setMessage()">Education</button>
-          <button class="button" @click="setMessage()">Development</button>
-          <button class="button" @click="setMessage()">About Me</button>
+          <button class="button" @click="profile()">Profile</button>
+          <button class="button" @click="projects()">Projects</button>
+          <button class="button" @click="expirience()">Expirience</button>
+          <button class="button" @click="education()">Education</button>
+          <button class="button" @click="development()">Development</button>
+          <button class="button" @click="aboutMe()">About Me</button>
         </div>
       </div>
     
       <p v-text="message"></p>
+
+      <!--  TODO: use to show different panels? i.e. if 
+      clicked then change message. if message is blah, then panel becomes this content
+      use linked pages? -->
+
       <!-- <p style="background-color:#ff6347ba;" -->
-      <p
+      <!-- <p
       v-if="message == profile"
       v-html="profile"
       ></p>
@@ -93,7 +98,7 @@
       <p
       v-if="message == contact"
       v-html="contact"
-      ></p>
+      ></p> -->
 
     </div>
 
@@ -109,26 +114,32 @@
       var app = new Vue({
         el: '#app',
         data: {
+          aboutMe:      "Here's a little blurb about me!",
           message:      "testing",
           profile:      "profile here",
           projects:     "projects here",
           expirience:   "expirience here",
           education:    "education here",
-          development:  "development here",
-          contact:      "erschroeder@knox.edu"
+          development:  "development here"
         },
         methods: {
-          
-          setMessage (text) {
-            if (text == this.profile) {
-              this.message = this.profile;
-            }
-          },
+          aboutMe: this.message = this.aboutMe,
 
-          temp (text) {
+          pprofile () {
             this.message = this.profile;
+          },
+          pprojects () {
+            this.message = this.projects;
+          },
+          pexpirience () {
+            this.message = this.expirience;
+          },
+          peducation () {
+            this.message = this.education;
+          },
+          pdevelopment () {
+            this.message = this.development;
           }
-          
         }
       });
 
