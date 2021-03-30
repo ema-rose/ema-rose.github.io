@@ -15,6 +15,14 @@
       padding: 20px;
       text-align: center
     }
+
+    .button {
+      border: none;
+      color: #ff9f9f92;
+      text-align: center;
+      font-size: 16px;
+      margin: 6px 4px;
+    }
     
     .topnav {
       overflow: hidden;
@@ -58,7 +66,7 @@
         <div class="header">
           
           <p v-text="message"></p>
-          <button @click="setMessage(app.profile)">Profile</button>
+          <button class="button" @click="setMessage()">Profile</button>
       </div>
       </div>
     
@@ -123,8 +131,8 @@
         },
         methods: {
           
-          setMessage (element) {
-            this.message = element;
+          setMessage () {
+            this.message = profile;
           }
 
            //message: preview(message),
