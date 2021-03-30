@@ -43,6 +43,19 @@
       background-color: #00000000;
       width: 1000px;
       max-height: auto;
+      float: right;
+      margin: 3px;
+      padding: 3px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .highlight {
+      background-color: #00000000;
+      width: 500px;
+      max-height: auto;
       float: left;
       margin: 3px;
       padding: 3px;
@@ -103,6 +116,7 @@
 
     <div id="app-2">
       <div>
+        <p><img class="highlight" v-bind:src="highlight"></p>
         <p><img class="preview" v-bind:src="resume"></p>
       </div>
     </div>
@@ -146,7 +160,8 @@
       var app2 = new Vue({
         el: '#app-2',
         data: {
-          resume:  './files/Resume.png'
+          resume:  './files/Resume.png',
+          highlight:   './files/ProfilePhoto.jpeg'
         },
         
         methods: {
@@ -154,6 +169,10 @@
           // in place of resume
           setContent: function() {
             this.resume = "./files/Resume.png"
+          },
+
+          setHighlight: function() {
+            this.highlight = './files/ProfilePhoto.jpeg'
           }
         }
       });
