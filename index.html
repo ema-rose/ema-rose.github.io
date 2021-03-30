@@ -60,7 +60,7 @@
       <div class="background">
         <div class="header">
           <button class="button" @click="setMessage('profile')">Profile</button>
-          <button class="button" @click="setMessage()">Projects</button>
+          <button class="button" @click="temp()">Projects</button>
           <button class="button" @click="setMessage()">Expirience</button>
           <button class="button" @click="setMessage()">Education</button>
           <button class="button" @click="setMessage()">Development</button>
@@ -123,11 +123,12 @@
             if (text == this.profile) {
               this.message = this.profile;
             }
-            
-          }
+          },
 
-           //message: preview(message),
-           //profile: preview(this.profile)
+          temp (text) {
+            this.message = this.profile;
+          }
+          
         }
       });
 
