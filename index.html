@@ -41,7 +41,7 @@
 
     .preview {
       background-color: #00000000;
-      width: 200px;
+      width: 500px;
       min-height: 200px;
       max-height: auto;
       float: left;
@@ -62,7 +62,7 @@
           <button class="button" @click="setAboutMe()">About Me</button>
           <button class="button" @click="setProfile()">Profile</button>
           <button class="button" @click="setProjects()">Projects</button>
-          <button class="button" @click="setExpirience()">Expirience</button>
+          <button class="button" @click="setExperience()">Experience</button>
           <button class="button" @click="setEducation()">Education</button>
           <button class="button" @click="setDevelopment()">Development</button>
         </div>
@@ -103,7 +103,7 @@
     </div>
 
     <div id="app-2">
-      <div class="preview">
+      <div>
         <p><img class="preview" v-bind:src="resume"></p>
       </div>
     </div>
@@ -118,7 +118,7 @@
           message:      "testing",
           profile:      "profile here",
           projects:     "projects here",
-          expirience:   "expirience here",
+          experience:   "experience here",
           education:    "education here",
           development:  "development here"
         },
@@ -132,8 +132,8 @@
           setProjects () {
             this.message = this.projects;
           },
-          setExpirience () {
-            this.message = this.expirience;
+          setExperience () {
+            this.message = this.experience;
           },
           setEducation () {
             this.message = this.education;
