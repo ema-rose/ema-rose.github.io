@@ -16,6 +16,14 @@
       text-align: center
     }
 
+    .text {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 16px;
+      color: #260047;
+      font-style: italic;
+      text-align: center;
+    }
+
     .button {
       border: none;
       border-radius: 6px;
@@ -80,7 +88,10 @@
         </div>
       </div>
     
-      <p v-text="message"></p>
+      <div>
+        <p v-text="message"></p>
+      </div>
+      
 
       <!--  TODO: use to show different panels? i.e. if 
       clicked then change message. if message is blah, then panel becomes this content
@@ -116,7 +127,7 @@
 
     <div id="app-2">
       <div>
-        <p><img class="highlight" v-bind:src="highlight"></p>
+        <!-- <p><img class="highlight" v-bind:src="highlight"></p> -->
         <p><img class="preview" v-bind:src="resume"></p>
       </div>
     </div>
