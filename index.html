@@ -18,7 +18,8 @@
 
     .button {
       border: none;
-      color: #ffffff92;
+      background-color: inherit;
+      color: #a9a9a992;
       text-align: center;
       font-size: 28px;
       margin: 8px 5px;
@@ -26,19 +27,6 @@
     .button:hover {
       color: white;
       }
-    
-    .topnav {
-      overflow: hidden;
-      background-color: #74557182;
-      padding: 14px 16px;
-    }
-
-    .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-    }
     
     .background {
       background-image: url("./files/CoverPhoto.png");
@@ -68,27 +56,18 @@
   </head>
   <body>
     <div id="app">
-
-      </div>
       <div class="background">
         <div class="header">
-          
-          <p v-text="message"></p>
           <button class="button" @click="setMessage()">Profile</button>
-      </div>
+          <button class="button" @click="setMessage()">Projects</button>
+          <button class="button" @click="setMessage()">Expirience</button>
+          <button class="button" @click="setMessage()">Education</button>
+          <button class="button" @click="setMessage()">Development</button>
+          <button class="button" @click="setMessage()">About Me</button>
+        </div>
       </div>
     
-
-    
-
-      <div class="topnav">
-        <!-- when clicked show component -->
-        <button @click="setMessage(app.profile)">Profile</button>
-        <button @click="setMessage(app.projects)">Projects</button>
-        <button @click="setMessage(app.expirience)">Expirience</button>
-        
-      </div>
-
+      <p v-text="message"></p>
       <!-- <p style="background-color:#ff6347ba;" -->
       <p
       v-if="message == profile"
