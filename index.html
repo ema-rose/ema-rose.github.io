@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <script src="./js/vue.js"></script>
+  <head>
+    <title>About Me</title>
+    
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      background-color: #ffffff92;
+      padding: 20px;
+      text-align: center
+    }
+
+    .text {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 16px;
+      color: #260047;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .button {
+      border: none;
+      border-radius: 6px;
+      background-color: inherit;
+      color: #4d4d4d92;
+      text-align: center;
+      font-size: 28px;
+      margin: 8px 5px;
+    }
+    .button:hover {
+      color: white;
+      }
+    
+    .background {
+      background-image: url("./files/CoverPhoto.png");
+      background-color: #0000009c;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .preview {
+      background-color: #00000000;
+      width: 1000px;
+      max-height: auto;
+      float: right;
+      margin: 3px;
+      padding: 3px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .highlight {
+      background-color: #00000000;
+      width: 100px;
+      max-height: auto;
+      float: left;
+      margin: 3px;
+      padding: 3px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="background">
+        <div class="header">
+          <button class="button" @click="setAboutMe()">About Me</button>
+          <!-- <button class="button" @click="setProfile()">Profile</button> -->
+          <!-- <button class="button" @click="setProjects()">Projects</button> -->
+          <!-- <button class="button" @click="setExperience()">Experience</button> -->
+          <button class="button" @click="setEducation()">Education</button>
+          <!-- <button class="button" @click="setDevelopment()">Development</button> -->
+        </div>
+      </div>
+    
+      <div>
+        <p class="text" v-text="message"></p>
+      </div>
+      
+
+      <!--  TODO: use to show different panels? i.e. if 
+      clicked then change message. if message is blah, then panel becomes this content
+      use linked pages? -->
+
+      <!-- <p style="background-color:#ff6347ba;" -->
+      <!-- <p
+      v-if="message == profile"
+      v-html="profile"
+      ></p>
+      <p
+      v-if="message == projects"
+      v-html="projects"
+      ></p>
+      <p
+      v-if="message == expirience"
+      v-html="expirience"
+      ></p>
+      <p
+      v-if="message == education"
+      v-html="education"
+      ></p>
+      <p
+      v-if="message == development"
+      v-html="development"
+      ></p>
+      <p
+      v-if="message == contact"
+      v-html="contact"
+      ></p> -->
+
+    </div>
+
+    <div id="app-2">
+      <div>
+        <!-- <p><img class="highlight" v-bind:src="highlight"></p> -->
+        <p class="highlight">
+          <button class="button">Try some cool stuff!</button>
+          <button class="button">Soon to come!</button>
+        </p>
+        <p><img class="preview" v-bind:src="resume"></p>
+      </div>
+    </div>
+
+    <script>
+      "use strict"
+
+      var app = new Vue({
+        el: '#app',
+        data: {
+          aboutMe:      "Hello! Gradually exploring my interest in all things tech.",
+          message:      "Click a button above to display content.",
+          // profile:      "I'm motivated, driven, curious, and passionate.",
+          // projects:     "Dictionary game {add}",
+          // experience:   "UPDATE",
+          education:    "Knox College, Galesburg, IL — B.A. in Computer Science & English Literature. Class of 2022.",
+          // development:  "President of Knox Jewish Club and former Student Senator"
+        },
+        methods: {
+          setAboutMe () {
+            this.message = this.aboutMe;
+          },
+          // setProfile () {
+          //   this.message = this.profile;
+          // },
+          // setProjects () {
+          //   this.message = this.projects;
+          // },
+          // setExperience () {
+          //   this.message = this.experience;
+          // },
+          setEducation () {
+            this.message = this.education;
+          }//,
+          // setDevelopment () {
+          //   this.message = this.development;
+          // }
+        }
+      });
+
+      //not currently in use
+      var app2 = new Vue({
+        el: '#app-2',
+        data: {
+          resume:  './files/Resume.png',
+          highlight:   './files/ProfilePhoto.jpeg'
+        },
+        
+        methods: {
+          // Create sections for each component and allow them to be set
+          // in place of resume
+          setContent: function() {
+            this.resume = "./files/Resume.png"
+          },
+
+          setHighlight: function() {
+            this.highlight = './files/ProfilePhoto.jpeg'
+          }
+        }
+      });
+
+    </script>
+  </body>
+</html>
